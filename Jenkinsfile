@@ -19,6 +19,19 @@ pipeline {
           steps {
             sh './ci/build-app.sh'
             archiveArtifacts 'app/build/libs/'
+            skipDefaultCheckout(true)
+          }
+        }
+
+        stage('clone down') {
+          agent {
+            node {
+              
+            }
+          }
+          steps {
+            stash name: 'code', include: '.git'
+            unstash
           }
         }
 
