@@ -9,12 +9,6 @@ pipeline {
           }
         }
 
-        stage('hello world1') {
-          steps {
-            sh 'echo "hello world2"'
-          }
-        }
-
         stage('build app') {
           agent {
             docker {
