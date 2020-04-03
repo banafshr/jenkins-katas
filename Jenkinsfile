@@ -24,13 +24,9 @@ pipeline {
         }
 
         stage('clone down') {
-          agent {
-            node {
-              label: master
-            }
-          }
+   
           steps {
-            stash name: 'code', includes: '.git'
+            stash name: 'code', excludes: '.git'
             unstash name: 'code'
           }
         }
