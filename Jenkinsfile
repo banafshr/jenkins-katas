@@ -9,9 +9,9 @@ pipeline {
           }
         }
 
-        stage('hello world') {
+        stage('hello world1') {
           steps {
-            sh 'echo "hello world"'
+            sh 'echo "hello world2"'
           }
         }
 
