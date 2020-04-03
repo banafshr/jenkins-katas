@@ -31,7 +31,7 @@ pipeline {
           }
           steps {
             stash name: 'code', includes: '.git'
-            unstash
+            unstash name: 'code'
           }
         }
 
