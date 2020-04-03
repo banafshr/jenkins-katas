@@ -26,7 +26,7 @@ pipeline {
         stage('clone down') {
           agent {
             node {
-              
+              label: master
             }
           }
           steps {
